@@ -18,19 +18,19 @@
  ],
  "icons": [
   {
-   "src": "icon-v18-192.png",
+   "src": "icon-v19-192.png",
    "sizes": "192x192",
    "type": "image/png",
    "purpose": "any"
   },
   {
-   "src": "icon-v18-512.png",
+   "src": "icon-v19-512.png",
    "sizes": "512x512",
    "type": "image/png",
    "purpose": "any"
   },
   {
-   "src": "icon-v18-mask.png",
+   "src": "icon-v19-mask.png",
    "sizes": "512x512",
    "type": "image/png",
    "purpose": "maskable"
