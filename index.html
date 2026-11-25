@@ -4,15 +4,15 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
 <meta name="description" content="Mossbright, a 3D adventure of twelve dungeons and twelve relics.">
-<meta property="og:title" content="Mossbright"><meta property="og:description" content="A 3D adventure of twelve dungeons and twelve relics."><meta property="og:image" content="icon-v22-512.png">
+<meta property="og:title" content="Mossbright"><meta property="og:description" content="A 3D adventure of twelve dungeons and twelve relics."><meta property="og:image" content="icon-v23-512.png">
 <meta name="theme-color" content="#0c130f">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-title" content="Mossbright">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <link rel="manifest" href="manifest.webmanifest">
-<link rel="icon" href="icon-v22-192.png">
-<link rel="apple-touch-icon" href="icon-v22-180.png">
+<link rel="icon" href="icon-v23-192.png">
+<link rel="apple-touch-icon" href="icon-v23-180.png">
 <title>Mossbright</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -225,7 +225,7 @@ canvas.xmap{position:static;inset:auto;display:block;margin:6px auto;border-radi
 
     <i id="safe" aria-hidden="true"></i>
     <div class="toprow" id="topRow">
-      <button class="tmenu" id="tMenu" hidden aria-label="Menu">☰</button>
+      <button class="tmenu" id="tMenu" hidden aria-label="Menu">☰</button><button class="bagb" id="modeBtn" hidden>Modes</button>
       <button class="bagb" id="bagBtn" hidden>Bag</button>
       <button class="go" id="frGo" hidden>Fight</button>
       <button class="swap" id="padSwap" hidden title="Move the pad to the other side">⇥</button>
@@ -249,7 +249,7 @@ canvas.xmap{position:static;inset:auto;display:block;margin:6px auto;border-radi
 
     <div class="screen" id="title">
       <div class="card">
-        <!--EMBLEM--><svg class="emblem" viewBox="0 0 100 100" role="img" aria-label="Mossbright logo"><defs><radialGradient id="lgBg" cx="50%" cy="40%" r="75%"><stop offset="0" stop-color="#463478"/><stop offset=".5" stop-color="#1e163c"/><stop offset="1" stop-color="#080614"/></radialGradient></defs><rect width="100" height="100" fill="url(#lgBg)"/><path d="M50 70L-14 -4L-6 -4Z" fill="#ff4ad8"/><path d="M50 70L16 -4L24 -4Z" fill="#4ad8ff"/><path d="M50 70L76 -4L84 -4Z" fill="#7aff6a"/><path d="M50 70L106 -4L114 -4Z" fill="#ffd24a"/><path d="M-2 50L12 50L12 100L-2 100Z" fill="#191433"/><path d="M0 53L2.4 53L2.4 56L0 56Z" fill="#ffd870"/><path d="M5.33333 53L7.73333 53L7.73333 56L5.33333 56Z" fill="#ffd870"/><path d="M0 60L2.4 60L2.4 63L0 63Z" fill="#ffd870"/><path d="M5.33333 60L7.73333 60L7.73333 63L5.33333 63Z" fill="#ffd870"/><path d="M0 67L2.4 67L2.4 70L0 70Z" fill="#ffd870"/><path d="M5.33333 67L7.73333 67L7.73333 70L5.33333 70Z" fill="#ffd870"/><path d="M0 74L2.4 74L2.4 77L0 77Z" fill="#ffd870"/><path d="M5.33333 74L7.73333 74L7.73333 77L5.33333 77Z" fill="#ffd870"/><path d="M0 81L2.4 81L2.4 84L0 84Z" fill="#ffd870"/><path d="M5.33333 81L7.73333 81L7.73333 84L5.33333 84Z" fill="#ffd870"/><path d="M0 88L2.4 88L2.4 91L0 91Z" fill="#ffd870"/><path d="M5.33333 88L7.73333 88L7.73333 91L5.33333 91Z" fill="#ffd870"/><path d="M0 95L2.4 95L2.4 98L0 98Z" fill="#ffd870"/><path d="M5.33333 95L7.73333 95L7.73333 98L5.33333 98Z" fill="#ffd870"/><path d="M11 40L21 40L21 100L11 100Z" fill="#191433"/><path d="M13 43L15.4 43L15.4 46L13 46Z" fill="#ffd870"/><path d="M13 50L15.4 50L15.4 53L13 53Z" fill="#ffd870"/><path d="M13 57L15.4 57L15.4 60L13 60Z" fill="#ffd870"/><path d="M13 64L15.4 64L15.4 67L13 67Z" fill="#ffd870"/><path d="M13 71L15.4 71L15.4 74L13 74Z" fill="#ffd870"/><path d="M13 78L15.4 78L15.4 81L13 81Z" fill="#ffd870"/><path d="M13 85L15.4 85L15.4 88L13 88Z" fill="#ffd870"/><path d="M13 92L15.4 92L15.4 95L13 95Z" fill="#ffd870"/><path d="M20 56L32 56L32 100L20 100Z" fill="#191433"/><path d="M22 59L24.4 59L24.4 62L22 62Z" fill="#ffd870"/><path d="M22 66L24.4 66L24.4 69L22 69Z" fill="#ffd870"/><path d="M22 73L24.4 73L24.4 76L22 76Z" fill="#ffd870"/><path d="M22 80L24.4 80L24.4 83L22 83Z" fill="#ffd870"/><path d="M22 87L24.4 87L24.4 90L22 90Z" fill="#ffd870"/><path d="M22 94L24.4 94L24.4 97L22 97Z" fill="#ffd870"/><path d="M66 46L78 46L78 100L66 100Z" fill="#191433"/><path d="M72 49L74.4 49L74.4 52L72 52Z" fill="#ffd870"/><path d="M72 56L74.4 56L74.4 59L72 59Z" fill="#ffd870"/><path d="M72 63L74.4 63L74.4 66L72 66Z" fill="#ffd870"/><path d="M72 70L74.4 70L74.4 73L72 73Z" fill="#ffd870"/><path d="M72 77L74.4 77L74.4 80L72 80Z" fill="#ffd870"/><path d="M72 84L74.4 84L74.4 87L72 87Z" fill="#ffd870"/><path d="M72 91L74.4 91L74.4 94L72 94Z" fill="#ffd870"/><path d="M77 36L87 36L87 100L77 100Z" fill="#191433"/><path d="M79 39L81.4 39L81.4 42L79 42Z" fill="#ffd870"/><path d="M79 46L81.4 46L81.4 49L79 49Z" fill="#ffd870"/><path d="M79 53L81.4 53L81.4 56L79 56Z" fill="#ffd870"/><path d="M79 60L81.4 60L81.4 63L79 63Z" fill="#ffd870"/><path d="M79 67L81.4 67L81.4 70L79 70Z" fill="#ffd870"/><path d="M79 74L81.4 74L81.4 77L79 77Z" fill="#ffd870"/><path d="M79 81L81.4 81L81.4 84L79 84Z" fill="#ffd870"/><path d="M79 88L81.4 88L81.4 91L79 91Z" fill="#ffd870"/><path d="M79 95L81.4 95L81.4 98L79 98Z" fill="#ffd870"/><path d="M86 52L102 52L102 100L86 100Z" fill="#191433"/><path d="M88 55L90.4 55L90.4 58L88 58Z" fill="#ffd870"/><path d="M88 62L90.4 62L90.4 65L88 65Z" fill="#ffd870"/><path d="M88 69L90.4 69L90.4 72L88 72Z" fill="#ffd870"/><path d="M88 76L90.4 76L90.4 79L88 79Z" fill="#ffd870"/><path d="M88 83L90.4 83L90.4 86L88 86Z" fill="#ffd870"/><path d="M88 90L90.4 90L90.4 93L88 93Z" fill="#ffd870"/><path d="M14 100L20 80L34 72L50 70L66 72L80 80L86 100Z" fill="#121018"/><path d="M43 71L50 84L57 71L50 69Z" fill="#f2efe6"/><path d="M48 74L52 74L54 96L50 100L46 96Z" fill="#b81e2a"/><path d="M34 72L44 71L50 86L40 100L28 100Z" fill="#2a2632"/><path d="M66 72L56 71L50 86L60 100L72 100Z" fill="#2a2632"/><path d="M40 46L60 46L59 60L54 68L46 68L41 60Z" fill="#d8a47c"/><path d="M40 46L60 46L60 52L40 52Z" fill="#a87a58"/><path d="M20 46L80 46L76 50L24 50Z" fill="#0e0c12"/><path d="M32 46L34 26L42 22L50 25L58 22L66 26L68 46Z" fill="#1a1720"/><path d="M33 39L67 39L67 44L33 44Z" fill="#b8862a"/><path d="M36 18L40 8L45 14L50 4L55 14L60 8L64 18Z" fill="#ffd24a"/><path d="M36 18L64 18L64 21.6L36 21.6Z" fill="#e8b030"/><circle cx="50" cy="10" r="1.6" fill="#ff4a6a"/><circle cx="41.5" cy="12.5" r="1.2" fill="#4ad8ff"/><circle cx="58.5" cy="12.5" r="1.2" fill="#7aff6a"/></svg>
+        <!--EMBLEM--><svg class="emblem" viewBox="0 0 100 100" role="img" aria-label="Mossbright logo"><defs><radialGradient id="lgBg" cx="50%" cy="40%" r="75%"><stop offset="0" stop-color="#3c4664"/><stop offset=".5" stop-color="#1a2034"/><stop offset="1" stop-color="#080a12"/></radialGradient></defs><rect width="100" height="100" fill="url(#lgBg)"/><path d="M57.4786 6.64021L62.3744 7.7759L67.1088 9.46249L71.62 11.678L75.849 14.3934L79.7409 17.5735L83.2447 21.1766L86.3148 25.1557L88.911 29.459L90.9996 34.0303L92.5533 38.81L93.5518 43.7356L93.982 48.743L93.8385 53.7668L93.1229 58.7415L87.2425 57.5494L87.8605 53.2532L87.9845 48.9144L87.6129 44.5899L86.7506 40.3359L85.4088 36.208L83.605 32.2601L81.3628 28.5436L78.7113 25.107L75.6853 21.9953L72.3242 19.2489L68.6718 16.9037L64.7758 14.9903L60.687 13.5337L56.4588 12.5529Z" fill="#7fd38a"/><path d="M82.3422 56.5561L98.0233 59.7348L86.3668 68.9329Z" fill="#7fd38a"/><path d="M83.8225 78.1432L80.3925 81.8166L76.566 85.0749L72.3928 87.8756L67.9275 90.1821L63.2283 91.9644L58.3565 93.1992L53.3757 93.8703L48.3509 93.9691L43.3475 93.4942L38.431 92.4518L33.6653 90.8556L29.1128 88.7263L24.8329 86.0918L20.8812 82.9863L24.852 78.4882L28.2648 81.1702L31.9611 83.4454L35.8928 85.2844L40.0085 86.6629L44.2547 87.5632L48.5757 87.9733L52.9154 87.888L57.217 87.3084L61.4245 86.242L65.4829 84.7027L69.3393 82.7107L72.9433 80.292L76.2481 77.478L79.2104 74.3054Z" fill="#f3c94b"/><path d="M28.1609 74.7398L17.5723 86.7348L15.4289 72.0418Z" fill="#f3c94b"/><path d="M8.72207 65.2359L7.25389 60.4293L6.34342 55.4866L6.00254 50.4724L6.23569 45.4519L7.03983 40.4908L8.40448 35.6538L10.3118 31.004L12.737 26.602L15.6483 22.5052L19.0078 18.7672L22.7717 15.4367L26.8908 12.5572L31.3114 10.1661L35.9759 8.29479L37.8883 13.9819L33.8599 15.598L30.0421 17.663L26.4846 20.1499L23.234 23.0263L20.3326 26.2545L17.8183 29.7926L15.7238 33.5943L14.0766 37.6101L12.898 41.7875L12.2035 46.0721L12.0022 50.4079L12.2966 54.7384L13.0829 59.0071L14.3509 63.1583Z" fill="#8fd0ff"/><path d="M39.4819 18.7211L34.3822 3.55556L48.1806 9.04039Z" fill="#8fd0ff"/><circle cx="50" cy="25" r="15.5" fill="#7fd38a"/><circle cx="50" cy="25" r="13.6" fill="#141a24"/><circle cx="29" cy="62" r="15.5" fill="#f3c94b"/><circle cx="29" cy="62" r="13.6" fill="#141a24"/><circle cx="71" cy="62" r="15.5" fill="#8fd0ff"/><circle cx="71" cy="62" r="13.6" fill="#141a24"/><path d="M44 22L56 22L56 33L44 33Z" fill="#ece5d4"/><path d="M47.5 15L52.5 15L52.5 22L47.5 22Z" fill="#ece5d4"/><path d="M46.5 15L50 9.5L53.5 15Z" fill="#e0563f"/><path d="M48.4 27L51.6 27L51.6 33L48.4 33Z" fill="#5c3a20"/><path d="M44 19.6L47 19.6L47 22L44 22Z" fill="#ece5d4"/><path d="M48.4 19.6L51.4 19.6L51.4 22L48.4 22Z" fill="#ece5d4"/><path d="M52.8 19.6L55.8 19.6L55.8 22L52.8 22Z" fill="#ece5d4"/><path d="M20 68L21.5 57L25.5 62L29 54L32.5 62L36.5 57L38 68Z" fill="#ffd24a"/><path d="M20 68L38 68L38 71L20 71Z" fill="#e8b030"/><circle cx="29" cy="61.5" r="1.4" fill="#ff4a6a"/><path d="M62 58L67 58L67 72L62 72Z" fill="#2a3c5c"/><path d="M63 59.4L66 59.4L66 60.8L63 60.8Z" fill="#ffd870"/><path d="M63 62.8L66 62.8L66 64.2L63 64.2Z" fill="#ffd870"/><path d="M63 66.2L66 66.2L66 67.6L63 67.6Z" fill="#ffd870"/><path d="M63 69.6L66 69.6L66 71L63 71Z" fill="#ffd870"/><path d="M67.5 53L72.5 53L72.5 72L67.5 72Z" fill="#2a3c5c"/><path d="M68.5 54.4L71.5 54.4L71.5 55.8L68.5 55.8Z" fill="#ffd870"/><path d="M68.5 57.8L71.5 57.8L71.5 59.2L68.5 59.2Z" fill="#ffd870"/><path d="M68.5 61.2L71.5 61.2L71.5 62.6L68.5 62.6Z" fill="#ffd870"/><path d="M68.5 64.6L71.5 64.6L71.5 66L68.5 66Z" fill="#ffd870"/><path d="M68.5 68L71.5 68L71.5 69.4L68.5 69.4Z" fill="#ffd870"/><path d="M73 60L77.5 60L77.5 72L73 72Z" fill="#2a3c5c"/><path d="M74 61.4L76.5 61.4L76.5 62.8L74 62.8Z" fill="#ffd870"/><path d="M74 64.8L76.5 64.8L76.5 66.2L74 66.2Z" fill="#ffd870"/><path d="M74 68.2L76.5 68.2L76.5 69.6L74 69.6Z" fill="#ffd870"/><path d="M78 56L82 56L82 72L78 72Z" fill="#2a3c5c"/><path d="M79 57.4L81 57.4L81 58.8L79 58.8Z" fill="#ffd870"/><path d="M79 60.8L81 60.8L81 62.2L79 62.2Z" fill="#ffd870"/><path d="M79 64.2L81 64.2L81 65.6L79 65.6Z" fill="#ffd870"/><path d="M79 67.6L81 67.6L81 69L79 69Z" fill="#ffd870"/><path d="M60 72L84 72L84 73.2L60 73.2Z" fill="#8fd0ff"/></svg>
         <div class="logo">Mossbright</div>
         <div class="modes">
           <div class="mode"><h3>Adventure</h3><p>Twelve dungeons, twelve relics. Then face the Bramble Warden.</p>
@@ -357,7 +357,7 @@ canvas.xmap{position:static;inset:auto;display:block;margin:6px auto;border-radi
       </div>
     </div>
       <div id="xui" hidden>
-      <div class="xtop" id="xtop"><button class="ph" id="xPhB">Phone</button><button id="xPadB">Pad ⇄</button></div>
+      <div class="xtop" id="xtop"><button class="ph" id="xPhB">Phone</button><button id="xPadB">Pad ⇄</button><button id="xModeB">Modes</button></div>
       <div class="xacts" id="xacts"><button id="xAtk" hidden>Punch</button><button id="xWep" hidden></button><button id="xCarB" hidden>Get in</button><button id="xRun">Run</button><button id="xAct">Act</button><button id="xJump">Jump</button></div>
     </div>
     <div class="xpan" id="xPan" hidden><div class="who" id="xWho"></div><div class="txt" id="xTxt"></div><div class="chs" id="xCh"></div></div>
@@ -1574,7 +1574,7 @@ function layoutPad(){
 }
 function swapPad(){CFG.cx=1-CFG.cx;saveCfg();layoutPad();}
 let padN='';
-function padVis(){$('tMenu').hidden=G.mode!=='play';if(G.L&&padN!==G.L.rowY+'/'+H){padN=G.L.rowY+'/'+H;$('topRow').style.top=G.L.rowY/H*stage.clientHeight+'px';}const bb=$('bagBtn');bb.hidden=G.mode!=='play';bb.classList.toggle('new',!!G.bagNew);const on=G.mode==='play'&&CFG.show>0;if($('pad').hidden===on){$('pad').hidden=$('padSwap').hidden=!on;if(on)layoutPad();}$('acts').hidden=G.mode!=='play';$('touch').hidden=CFG.show===0;const pb=$('tPot'),pv0=G.mode==='play'&&CFG.show===2;pb.hidden=!pv0;if(pv0){pb.style.top=((G.L&&G.L.potY)||68)/H*stage.clientHeight+'px';const n='x'+P.potions;if($('potN').textContent!==n){$('potN').textContent=n;pb.classList.toggle('none',!P.potions);}}G.potW=pv0?pb.offsetWidth/(stage.clientWidth||W)*W+10:0;if(!on&&PAD.on)padEnd();}
+function padVis(){$('tMenu').hidden=G.mode!=='play';$('modeBtn').hidden=G.mode!=='play'||XW.on;if(G.L&&padN!==G.L.rowY+'/'+H){padN=G.L.rowY+'/'+H;$('topRow').style.top=G.L.rowY/H*stage.clientHeight+'px';}const bb=$('bagBtn');bb.hidden=G.mode!=='play';bb.classList.toggle('new',!!G.bagNew);const on=G.mode==='play'&&CFG.show>0;if($('pad').hidden===on){$('pad').hidden=$('padSwap').hidden=!on;if(on)layoutPad();}$('acts').hidden=G.mode!=='play';$('touch').hidden=CFG.show===0;const pb=$('tPot'),pv0=G.mode==='play'&&CFG.show===2;pb.hidden=!pv0;if(pv0){pb.style.top=((G.L&&G.L.potY)||68)/H*stage.clientHeight+'px';const n='x'+P.potions;if($('potN').textContent!==n){$('potN').textContent=n;pb.classList.toggle('none',!P.potions);}}G.potW=pv0?pb.offsetWidth/(stage.clientWidth||W)*W+10:0;if(!on&&PAD.on)padEnd();}
 function padEnd(){PAD.rx=PAD.ry=0;PAD.s=null;PAD.on=false;PAD.id=null;PAD.x=PAD.y=0;$('padKnob').style.transform='translate(-50%,-50%)';$('pad').removeAttribute('data-d');}
 function padMove(ev){
   const b=$('pad').getBoundingClientRect(),R0=b.width/2;let x=(ev.clientX-b.left-R0)/R0,y=(ev.clientY-b.top-R0)/R0;const l=Math.hypot(x,y);if(l>1){x/=l;y/=l;}
@@ -4775,7 +4775,7 @@ function xUI(){ // which buttons are showing and what they say
   const sw=XW.p&&XW.p.swim&&!c;set('xAct',mini?'Tap!':c?'Horn':XW.near?(sw&&/^(Punch|Fire)/.test(XW.near.l)?XW.near.l.split(' ')[0]:'Use'):'Act');$('xAct').classList.toggle('hot',mini||!c&&!!XW.near);
   set('xJump',sw?'Up':k==='heli'?'Up':k==='plane'?'Faster':c?'Brake':'Jump',mini);set('xRun',sw?'Dive':k==='heli'?'Down':k==='plane'?'Slower':'Run',mini||c&&!k||k==='boat');
   xAtkUI(set);
-  set('xCarB',c?(XAIR(c)&&c.alt>6?'Jump out':'Get out'):'Get in',mini||!(c||XW.nearCar));$('xPhB').hidden=$('xPadB').hidden=!play;
+  set('xCarB',c?(XAIR(c)&&c.alt>6?'Jump out':'Get out'):'Get in',mini||!(c||XW.nearCar));$('xPhB').hidden=$('xPadB').hidden=$('xModeB').hidden=!play;
   $('xacts').classList.toggle('l',CFG.cx>=0.5);
 }
 /* ---- phone ---- */
@@ -4813,7 +4813,7 @@ function xPhoneDraw(){
     if(XL.news.length){B.appendChild(el('h3','','In the news today'));for(const s of XL.news)B.appendChild(el('p','',s));B.appendChild(el('p','','Source: Wikipedia current events, CC BY-SA.'));}
   }else{
     const g=sect('Settings');const add=(t,d,f,tag)=>g.append(card('book','#b5a58a',t,d,{on:()=>{f();xPhoneDraw();},tag:tag||'Change'}));add('Sound',muted?'Off':'On',()=>setMute(!muted));add('Graphics',QN[Q],()=>setQuality((Q+2)%3));if(canBuzz)add('Vibration',buzzOn?'On':'Off',()=>setBuzz(!buzzOn));add('Blood',xBlood()?'On':'Off',()=>xSetBlood(!xBlood()));add('Strong language',xCuss()?'On':'Off',()=>store.set('mb-cuss',xCuss()?'0':'1'));add('Pad side',CFG.cx<0.5?'Left':'Right',()=>swapPad());add('Camera speed',['Slow','Normal','Fast'][XW.sens==null?1:XW.sens],()=>{XW.sens=((XW.sens==null?1:XW.sens)+1)%3;});
-    const q=sect('Leave');q.append(card('ring','#ff7a59','Save and quit','Your life is saved.',{on:()=>xStop(),tag:'Quit'}));
+    const q=sect('Leave');q.append(card('ring','#f3c94b','Switch mode','Hop to Adventure or Franchise. Your city life is saved.',{on:()=>{xClosePhone();xModeOpen();},tag:'Go'}),card('ring','#ff7a59','Save and quit','Your life is saved.',{on:()=>xStop(),tag:'Quit'}));
     const h=sect('How to play');for(const[a,b]of[['Move','Pad or WASD. Push further to walk faster'],['Look','Drag on the picture. Pinch or scroll to zoom'],['Act','Use, talk, open. E on a keyboard'],['Get in','Cars, bikes, ATVs, boats, planes, helicopters. F on a keyboard'],['Helicopter','Up and Down buttons, pad to fly and turn. Space and Shift'],['Plane and jet','Faster to speed up, then pad up to climb. Space and Shift'],['Swimming','Dive and Up buttons. Watch your air. Scuba gear is sold at the boathouse'],['Attack','Hold the red button to punch, kick, swing or shoot. J on a keyboard. The small button or Q switches weapon'],['Fighter jets','Hold Fire for the cannon. Tap Missile when the box turns red'],['Your look','Phone, Bag, Change your look. Or visit the Outfitters'],['Water','Cars can splash through shallow water, but go too deep and the engine floods'],['Police','Stay out of sight until they give up, or respray at a garage. Shoot at them and they shoot back'],['Hold-ups','Walk into a shop or bank with a loaded gun in your hand to rob it. Banks pay the most and fight back hardest']])h.append(card('book','#8ab0c8',a,b));
   }
 }
@@ -4882,7 +4882,7 @@ function xFrame(dt){
 /* ---- in and out ---- */
 function xStart(cont){
   initAudio();if(G.fr)frEnd();G.nosave=true;XG=cont?xRead():null;if(!XG){XG=newLife();}else XG=Object.assign(newLife(),XG);XG.heat=0;G.mode='xp';XW.on=true;XW.mode='play';XW.t=0;XW.arrived=0;XW.lastCar=null;XW.zoom=1;XW.pop=null;XW.toast=null;pfReset();
-  $('title').hidden=true;for(const i of['tMenu','bagBtn','frGo','padSwap','acts','tPot'])$(i).hidden=true;setupTargets();xInset();
+  $('title').hidden=true;for(const i of['tMenu','bagBtn','frGo','padSwap','acts','tPot','modeBtn'])$(i).hidden=true;setupTargets();xInset();
   xLoadCity();layoutPad();setSong('xcity');xLive();const b=xBizPending();xUI();
   if(!cont)xStyleOpen(()=>xPanel('You','One bag, '+xMoney(XG.cash)+' and a phone. It is '+xNow(XW.c).hm+' in '+XW.c.n+', '+Math.round(XW.wx.t)+' degrees and '+XW.wx.name.toLowerCase()+'. Every block in this city pays somebody. By the time you are done, it will all pay you.',[['Go and find it',()=>xToast(coarse?'Walk to someone with a green ! for work. Drag the picture to look around.':'WASD to move, drag to look. Find someone with a green ! for work.',6)]]));else if(b>0)xToast('Your businesses made '+xMoney(b)+' while you were away. Collect it on your phone.',5);
 }
@@ -5533,6 +5533,31 @@ const _xDone1=xJobDone;xJobDone=function(j){const fin=j.story===XST.length-1;_xD
 
 
 XSH.gear=function(){xPanel('Outfitters','Racks of everything: streetwear, tailored suits, and a back room full of costumes.',[['Fitting room: change your look (free)',()=>xStyleOpen()],['Tailored suit '+xPrice(420)+' (+1 charm)',pay(420,()=>{Object.assign(XG.look,{top:'suit',jc:'#1e2230',tc:'#ecebe6',bot:'trousers',bc:'#1a1c24',cos:''});XG.charm++;xToast('Charm is now '+Math.round(XG.charm*10)/10+'.');})],['Running shoes '+xPrice(190)+' (+1 fitness)',pay(190,()=>{XG.fit++;xToast('Fitness is now '+XG.fit+'.');})],xBye]);};
+
+/* ================= hop between the three modes ================= */
+let xModePrev=null;
+function xModeOpen(){
+  const xp=XW.on;if(xp){if(XW.mode!=='play')return;xModePrev='x';XW.mode='modes';for(const k in XK)XK[k]=false;XW.fire=false;padEnd();xEngine(null);xUI();}
+  else{if(G.mode!=='play')return;xModePrev=G.mode;G.mode='modes';mouse.held=false;for(const k in keys)keys[k]=false;P.goal=P.path=null;if(typeof holdEnd==='function')holdEnd();}
+  let el=$('modeSw');if(!el){el=document.createElement('div');el.id='modeSw';el.className='screen';el.style.zIndex=30;$('xPan').parentNode.appendChild(el);}
+  const cur=xp?'xp':G.fr?'fr':'adv',has={adv:!!readSave(),fr:!!readFr(),xp:!!xRead()};
+  const row=(k,n,d)=>`<button class="btn ${k===cur?'':'pri'} mswb" data-k="${k}" ${k===cur?'disabled':''}><b>${n}</b><span>${k===cur?'You are here':(has[k]?'Continue':'Start new')} · ${d}</span></button>`;
+  el.innerHTML=`<div class="card mswc"><h2>Switch mode</h2><p>Your progress here is saved first. You can come back any time and carry on where you left off.</p>
+    ${row('adv','Adventure','dungeons and relics')}${row('fr','Franchise','castle, waves, raids')}${row('xp','Exploiter','the city, rise to boss')}
+    <button class="btn" id="mswBack">Back to the game</button></div>`;
+  el.hidden=false;for(const b of el.querySelectorAll('.mswb'))b.onclick=()=>xModeGo(b.dataset.k);$('mswBack').onclick=xModeClose;
+}
+function xModeClose(){const el=$('modeSw');if(el)el.hidden=true;if(xModePrev==='x'){if(XW.mode==='modes')XW.mode='play';xUI();}else if(xModePrev&&G.mode==='modes')G.mode=xModePrev;xModePrev=null;}
+function xModeGo(k){
+  const el=$('modeSw');if(el)el.hidden=true;const wasX=xModePrev==='x';xModePrev=null;
+  if(wasX){XW.mode='play';xStop();}else{G.mode='play';toTitle();}
+  if(k==='adv')startGame(!!readSave());else if(k==='fr')startFr(!!readFr());else xStart(!!xRead());
+  SFX.blip();
+}
+(()=>{const st=document.createElement('style');st.textContent=`.mswc{max-width:460px;text-align:left}.mswc h2{text-align:center}.mswb{display:flex;flex-direction:column;align-items:flex-start;gap:2px;text-align:left;padding:.65em 1em}.mswb b{font-size:18px}.mswb span{font-size:14px;font-weight:500;opacity:.85}.mswb:disabled{opacity:.6}
+#modeBtn,#xModeB{border-color:#c9a032!important;color:#ffd866!important}`;document.head.appendChild(st);})();
+
+{const mb=$('modeBtn');mb.addEventListener('pointerdown',ev=>{ev.preventDefault();ev.stopPropagation();});mb.onclick=()=>xModeOpen();$('xModeB').onclick=()=>xModeOpen();}
 
 initPad();
 if(coarse){$('dlgMore').textContent='tap ▼';const h=[['Pad','Walk. Push into a cliff or house wall to climb'],['Tap','Walk there, attack an enemy or talk'],['Pinch','Zoom in and out with two fingers'],['Jump','Hop over spikes, rings and fences'],['Slash / Bow','Hold down to keep swinging or shooting'],['Bag','Gear, books, upgrades, reputation'],['Pad ⇥','Move the pad to the other side'],['☰','Menu and settings']];for(const k of document.querySelectorAll('.keys')){k.innerHTML='';for(const[a,b]of h){const x=document.createElement('b'),y=document.createElement('span');x.textContent=a;y.textContent=b;k.append(x,y);}}}
