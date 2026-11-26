@@ -1,0 +1,17 @@
+{
+ "kloofendal_48d_partly_cloudy_puresky": {
+  "u": 0.5947,
+  "el": 48.2,
+  "sun": 32123.1
+ },
+ "kloofendal_overcast_puresky": {
+  "u": 0.5811,
+  "el": 22.9,
+  "sun": 2.7
+ },
+ "rogland_clear_night": {
+  "u": 0.4697,
+  "el": 34.1,
+  "sun": 1.2
+ }
+}
