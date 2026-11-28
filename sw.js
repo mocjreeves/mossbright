@@ -1,6 +1,6 @@
 // keeps the game on the device so it opens without a connection
-const CACHE = 'mossbright-8830226b8e';
-const LOCAL = ['./', 'manifest.webmanifest', 'icon-v29-192.png', 'icon-v29-512.png', 'icon-v29-180.png', 'icon-v29-mask.png'];
+const CACHE = 'mossbright-df2fd2713e';
+const LOCAL = ['./', 'manifest.webmanifest', 'icon-v30-192.png', 'icon-v30-512.png', 'icon-v30-180.png', 'icon-v30-mask.png'];
 const REMOTE = ["https://cdn.jsdelivr.net/npm/three@0.158.0/build/three.min.js", "https://fonts.googleapis.com/css2?family=Outfit:wght@400;600&family=Pixelify+Sans:wght@500;700&display=swap"];
 self.addEventListener('install', e => e.waitUntil((async () => {
   const c = await caches.open(CACHE);
